@@ -1,17 +1,29 @@
-body {
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+  font-family: JetBrainsMono;
+  src: url(./assets/fonts/JetBrainsMono-Regular.ttf);
 }
-
+@font-face {
+  font-family: OnestSanSerif;
+  src: url(./assets/fonts/Onest-Regular.ttf);
+}
+@font-face {
+  font-family: YoungSerif;
+  src: url(./assets/fonts/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: Joystix;
+  src: url(./assets/fonts/Joystix.otf);
+}
+.type-profile {
+  font-family: Joystix;
+  font-size: 0.7em;
+  letter-spacing: -0.07em;
+}
 .standard-btn {
   background-color: red;
 }

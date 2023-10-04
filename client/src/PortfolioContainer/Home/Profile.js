@@ -34,8 +34,10 @@ const Profile = () => {
                 <div className="profile-parent">
                     <div className="profile-details">
                         <div className="colz">
-                            <a href='https://github.com/CalebeCopello' rel='noreferrer' target='_blank'><FaGithub /></a>
-                            <a href='https://www.linkedin.com/in/calebe-copello-59b588263/' rel='noreferrer' target='_blank'><FaLinkedin /></a>
+                            <div className="colz-icons">
+                                <a href='https://github.com/CalebeCopello' rel='noreferrer' target='_blank'><FaGithub /></a>
+                                <a href='https://www.linkedin.com/in/calebe-copello-59b588263/' rel='noreferrer' target='_blank'><FaLinkedin /></a>
+                            </div>
                         </div>
                         <div className="profile-details-name">
                             <span className="primary-text">
@@ -47,7 +49,7 @@ const Profile = () => {
                             <span className="primary-text">
                                 {" "}
                                 <h1>
-                                    <span ref={el} />
+                                    <span ref={el} className='type-profile'/>
                                 </h1>
                                 <span className="profile-role-tagline">
                                     Procurando desafios como Desenvolvedor.
@@ -62,6 +64,11 @@ const Profile = () => {
                             <a href="./calebeCopello.pdf" download='Calebe Copello.pdf'>
                                 <button className="highlighted-btn">Baixar CV</button>
                             </a>
+                        </div>
+                    </div>
+                    <div className="profile-picture">
+                        <div className="profile-picture background">
+
                         </div>
                     </div>
                 </div>
