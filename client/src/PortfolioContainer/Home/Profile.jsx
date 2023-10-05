@@ -10,8 +10,10 @@ const Profile = () => {
     React.useEffect(() => {
         const typed = new Typed(el.current, {
         strings: [
-            '<i>First</i> sentence.', 
-            'a second sentence. &#128512;'
+            'Desenvolvedor entusiasmado &#128187;', 
+            'Estudante de ADS &#128640;',
+            'Aprendiz MERN Stack &#127760;',
+            '<i>"Live long and prosper"</i> &#128406;',
         ],
         typeSpeed: 75,
         startDelay: 1000,
@@ -20,7 +22,7 @@ const Profile = () => {
         loopCount: Infinity,
         backDelay: 1000,
         smartBackspace: true,
-        showCursor: false,
+        showCursor: true,
     })
 
     return () => {
