@@ -39,8 +39,8 @@ const Profile = () => {
                     <div className="profile-details">
                         <div className="colz">
                             <div className="colz-icons">
-                                <a href='https://github.com/CalebeCopello' rel='noreferrer' target='_blank'><FaGithub /></a>
-                                <a href='https://www.linkedin.com/in/calebe-copello-59b588263/' rel='noreferrer' target='_blank'><FaLinkedin /></a>
+                                <a href='https://github.com/CalebeCopello' rel='noreferrer' target='_blank' className='profile-social-icons'><FaGithub /></a>
+                                <a href='https://www.linkedin.com/in/calebe-copello-59b588263/' rel='noreferrer' target='_blank' className='profile-social-icons'><FaLinkedin /></a>
                             </div>
                         </div>
                         <div className="profile-details-name">
@@ -68,7 +68,7 @@ const Profile = () => {
                         </div>
                     </div>
                     <div className="profile-picture">
-                        <div className="profile-picture background">
+                        <div className="profile-picture-background">
 
                         </div>
                     </div>
