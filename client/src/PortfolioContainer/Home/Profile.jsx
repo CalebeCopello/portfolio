@@ -1,6 +1,7 @@
 import React from 'react'
 import {FaGithub, FaLinkedin} from 'react-icons/fa'
 import Typed from 'typed.js'
+import './Profile.css'
 
 const Profile = () => {
   // Create reference to store the DOM element containing the animation
@@ -10,7 +11,7 @@ const Profile = () => {
         const typed = new Typed(el.current, {
         strings: [
             '<i>First</i> sentence.', 
-            '&amp; a second sentence. &#128512;'
+            'a second sentence. &#128512;'
         ],
         typeSpeed: 75,
         startDelay: 1000,
@@ -19,6 +20,7 @@ const Profile = () => {
         loopCount: Infinity,
         backDelay: 1000,
         smartBackspace: true,
+        showCursor: false,
     })
 
     return () => {
@@ -41,28 +43,25 @@ const Profile = () => {
                         </div>
                         <div className="profile-details-name">
                             <span className="primary-text">
-                                {" "}
                                 Olá, eu sou <span className="highlighted-text">Calebe</span>
                             </span>
                         </div>
                         <div className="profile-details-role">
                             <span className="primary-text">
-                                {" "}
                                 <h1>
-                                    <span ref={el} className='type-profile'/>
+                                    <span ref={el} className='typejs-profile'/>
                                 </h1>
-                                <span className="profile-role-tagline">
-                                    Procurando desafios como Desenvolvedor.
-                                </span>
+                            </span>
+                            <span className="profile-role-tagline primary-text">
+                                Procurando desafios como Desenvolvedor.
                             </span>
                         </div>
                         <div className="profile-options">
-                            <button className="standard-btn">
-                                {""}
+                            <button className="standard-btn btn">
                                 Me contrate
                             </button>
                             <a href="./calebeCopello.pdf" download='Calebe Copello.pdf'>
-                                <button className="highlighted-btn">Baixar CV</button>
+                                <button className="highlighted-btn btn">Baixar CV</button>
                             </a>
                         </div>
                     </div>

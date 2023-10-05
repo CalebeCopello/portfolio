@@ -20,15 +20,26 @@
   font-family: Joystix;
   src: url(./assets/fonts/Joystix.otf);
 }
-.type-profile {
-  font-family: Joystix;
-  font-size: 0.7em;
-  letter-spacing: -0.07em;
-}
-.standard-btn {
-  background-color: red;
-}
-.highlighted-btn {
-  background-color: red;
-}
 
+.btn {
+  border: 0px;
+	border-radius:7px;
+	display:inline-block;
+	cursor:pointer;
+  padding: 8px 12px;
+  text-decoration: none;
+  text-shadow: 1px 1px 0px rgba(0, 0, 0, 0.1);
+  background-color: var(--bg0);
+  box-shadow: 2px 2px rgba(0, 0, 0, 0.3);
+}
+.btn:hover {
+  transition: transform 0.05s;
+	background-color:var(--bg1);
+}
+.btn:active {
+  background-color:var(--fg3);
+	position:relative;
+  transition: transform 0.05s;
+  transform: scale(0.95,0.95);
+  box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
+}

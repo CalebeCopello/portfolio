@@ -76,7 +76,7 @@
   --bg0_h: #f9f5d7;
   --bg0: #fbf1c7;
   --bg1: #ebdbb2;
-  --bg2: #d5c4a1
+  --bg2: #d5c4a1;
   --bg3: #bdae93;
   --bg4: #a89984;
   --bg0_s: #f2e5bc;
@@ -93,4 +93,7 @@
   --purple1: #8f3f71;
   --aqua1: #427b58;
   --orange1: #af3a03;
+
+  /* Custom */
+  --textContrast-fg4: #FFFFFA;
 }
