@@ -69,7 +69,7 @@
 .profile-picture-background {
     height: 92%;
     width: 92%;
-    background-image: url("../../assets/Home/avatarProfile.png");
+    background-image: url("../../../assets/Home/avatarProfile.png");
     background-size: cover;
     background-color: aliceblue;
     border-radius: 50%;
@@ -92,10 +92,7 @@
     transition: 0.2s ease-out;
     color: var(--blue0);
 }
-.profile-footer path {
-    fill: var(--fg0);
-    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
-}
+
 
 @media screen and (max-width: 1110px) {
     .profile-picture{

@@ -1,0 +1,12 @@
+.footer-container{
+    height: 18%;
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-parent path {
+    fill: var(--fg0);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+}

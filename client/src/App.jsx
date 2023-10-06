@@ -1,10 +1,10 @@
 import './App.css';
-import Profile from './PortfolioContainer/Home/Profile.jsx'
+import PortfolioContainer from './PortfolioContainer/PortifolioContainer';
 
 const App = () => {
   return (
     <>
-      <Profile />
+      <PortfolioContainer />
     </>
   )
 }
