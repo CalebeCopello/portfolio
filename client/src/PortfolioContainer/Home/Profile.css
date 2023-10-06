@@ -7,6 +7,7 @@
     height: 10%;
     min-height: fit-content;
     background-color: var(--fg0);
+    padding-bottom: 1em;
 }
 .profile-parent {
     display: flex;
@@ -90,6 +91,10 @@
 .profile-social-icons:hover {
     transition: 0.2s ease-out;
     color: var(--blue0);
+}
+.profile-footer path {
+    fill: var(--fg0);
+    filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
 }
 
 @media screen and (max-width: 1110px) {
