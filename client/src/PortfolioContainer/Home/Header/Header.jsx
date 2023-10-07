@@ -2,7 +2,7 @@ import { useState } from "react"
 import {TOTALSCREENS, GETSCREENINDEX} from '../../../utils/commonUtils'
 import ScrollService from '../../../utils/ScrollService'
 import {RxHamburgerMenu} from 'react-icons/rx'
-import {FaDev} from 'react-icons/fa'
+import {HiOutlineCodeBracketSquare} from 'react-icons/hi2'
 import './Header.css'
 
 const Header = () => {
@@ -43,16 +43,17 @@ const Header = () => {
 
     return (
         <>
-        <div className="header-option" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
+        <div className="header-container" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
             <div className="header-parent">
-                <div className="header-hamburger" onClick={() => setShowHeaderOptions(!showHeaderOptions)}></div>
+                <div className="header-hamburger" onClick={() => setShowHeaderOptions(!showHeaderOptions)}>
                 <RxHamburgerMenu className='header-hamburger-bars' />
-            </div>
+                </div>
             <div className="header-logo">
-                <span><FaDev /></span>
+                <span><HiOutlineCodeBracketSquare />Copello</span>
             </div>
             <div className={(showHeaderOptions) ? 'header-options show-hamburger-options' : 'header-options'}>
                 {getHeaderOptions()}
+            </div>
             </div>
         </div>
         </>

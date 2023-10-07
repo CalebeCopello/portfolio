@@ -1,0 +1,41 @@
+.header-container {
+    background-color: var(--fg0);
+    display: flex;
+    justify-content: center;
+    height: 140px;
+    color: var(--textContrast-fg4);
+}
+.header-parent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    width: 70%;
+    color: var(--textContrast-fg4);
+}
+.header-logo {
+    font-size: 50px;
+    font-family: Joystix;
+    font-weight: 600;
+    color: var(--textContrast-fg4);
+}
+.header-options {
+    display: flex;
+    align-items: center;
+}
+.header-option {
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.header-hamburger {
+    display: none;
+    color: var(--textContrast-fg4);
+}
+.header-option-separator {
+    margin: 0 50px 0 0;
+    color: var(--textContrast-fg4);
+}
+.selected-header-option {
+    color: var(--orange0);
+}
