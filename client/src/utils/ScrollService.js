@@ -1,12 +1,6 @@
-import Profile from "../PortfolioContainer/Home/Profile";
+import { TOTALSCREENS } from './commonUtils'
 import {Subject} from 'rxjs'
 
-const SCREENS = [
-    {
-        screenName: 'Profile',
-        component: Profile
-    }
-]
 
 export default class ScrollService {
     static scrollHandler = new ScrollService()
@@ -22,7 +16,7 @@ export default class ScrollService {
         contactMeScreen.scrollIntoView({behavior: 'smooth'})
     }
     scrollToHome = () => {
-        let homeScreen = document.getElementById('contactMe')
+        let homeScreen = document.getElementById('Home')
         if (!homeScreen) return
         homeScreen.scrollIntoView({behavior: 'smooth'})
     }
@@ -45,7 +39,7 @@ export default class ScrollService {
     }
     checkCurrentScreenUnderViewport = (e) => {
         if(!e || Object.keys(e).length <1) return
-        for (let screen of SCREENS) {
+        for (let screen of TOTALSCREENS) {
             let screenFromDOM = document.getElementById(screen.screenName)
             if (!screenFromDOM) continue
 
