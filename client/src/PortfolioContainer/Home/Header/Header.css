@@ -14,10 +14,15 @@
     color: var(--textContrast-fg4);
 }
 .header-logo {
+    display: flexbox;
     font-size: 50px;
     font-family: Joystix;
     font-weight: 600;
     color: var(--textContrast-fg4);
+}
+.header-dev-icon {
+    display: flex;
+    margin-top: 1em;
 }
 .header-options {
     display: flex;
@@ -47,7 +52,51 @@
 }
 
 @media only screen and (max-width: 970px) {
+    .header-logo {
+        font-size: 45px;
+        font-family: Joystix;
+        font-weight: 600;
+        color: var(--textContrast-fg4);
+    }
     .header-hamburger {
         display: flex;
+    }
+    .header-parent {
+        width: 100%;
+        padding: 0 40px;
+        position: relative;
+    }
+    .header-options {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        left: -100%;
+        top: 0px;
+        height: 100vh;
+        width: 100%;
+        justify-content: space-around;
+        background-color: var(--fg0);
+        z-index: 1000;
+        opacity: 0.8;
+        transition: all 0.8s ease-out;
+    }
+    .header-option-separator{
+        margin: 0;;
+    }
+    .selected-header-option{
+        color: var(--textContrast-fg4);
+    }
+    .header-option{
+        color: var(--textContrast-fg4)
+    }
+    .header-hamburger-bars{
+        font-size: 30px;
+        cursor: pointer;
+        margin: 0px 10px;
+        color: var(--textContrast-fg4)
+    }
+    .show-hamburger-options{
+        left: 0;
+        opacity: 1;
     }
 }

@@ -49,7 +49,12 @@ const Header = () => {
                 <RxHamburgerMenu className='header-hamburger-bars' />
                 </div>
             <div className="header-logo">
-                <span><HiOutlineCodeBracketSquare />Copello</span>
+                <span>
+                    <div className="header-dev-icon">
+                        <HiOutlineCodeBracketSquare />
+                    </div>
+                    Copello
+                </span>
             </div>
             <div className={(showHeaderOptions) ? 'header-options show-hamburger-options' : 'header-options'}>
                 {getHeaderOptions()}
