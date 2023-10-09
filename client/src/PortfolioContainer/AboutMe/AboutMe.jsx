@@ -3,6 +3,7 @@ import ScreenHeading from '../../utils/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utils/ScrollService'
 import Animations from '../../utils/Animations'
 import Buttons from '../../utils/Buttons/Buttons'
+import './AboutMe.css'
 
 const AboutMe = (props) => {
     const fadeInScreenHandler = (screen) => {
@@ -30,9 +31,8 @@ const AboutMe = (props) => {
         return(
             ABOUTME.highlights.bullets.map((v, i) => (
                 <div className="highlight" key={i}>
-                    <div className="highlight-rect">
-                        <span>{v}</span>
-                    </div>
+                    <div className="highlight-rect"></div>
+                    <span>{v}</span>
                 </div>
             ))
         )
@@ -45,19 +45,19 @@ const AboutMe = (props) => {
                 <ScreenHeading title={'Sobre Mim'} subHeading={'Por que me escolher?'} />
                 <div className="about-me-card">
                     <div className="about-me-profile">
-                        <div className="about-me-details">
-                            <span className="about-me-description">
-                                {ABOUTME.description}
-                            </span>
-                            <div className="about-me-highlights">
-                                <div className="highlight-heading">
-                                    <span>{ABOUTME.highlights.heading}</span>
-                                </div>
-                                {renderHighlights()}
+                    </div>
+                    <div className="about-me-details">
+                        <span className="about-me-description">
+                            {ABOUTME.description}
+                        </span>
+                        <div className="about-me-highlights">
+                            <div className="highlight-heading">
+                                <span>{ABOUTME.highlights.heading}</span>
                             </div>
-                            <div className="about-me-options">
-                                <Buttons />
-                            </div>
+                            {renderHighlights()}
+                        </div>
+                        <div className="about-me-options">
+                            <Buttons />
                         </div>
                     </div>
                 </div>
