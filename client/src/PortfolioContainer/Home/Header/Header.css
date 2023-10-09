@@ -14,7 +14,7 @@
     color: var(--textContrast-fg4);
 }
 .header-logo {
-    display: flexbox;
+    display: flex;
     font-size: 50px;
     font-family: Joystix;
     font-weight: 600;
@@ -23,6 +23,10 @@
 .header-dev-icon {
     display: flex;
     margin-top: 1em;
+}
+.header-dev-name {
+    display: flex;
+    margin-top: 0.85em;
 }
 .header-options {
     display: flex;
