@@ -7,7 +7,7 @@ export const TOTALSCREENS = [
         component: Home,
     },
     {
-        screenName: 'AboutMe',
+        screenName: 'Sobre Mim',
         component: AboutMe,
     },
 ]

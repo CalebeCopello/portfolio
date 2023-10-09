@@ -1,6 +1,6 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 import {TOTALSCREENS, GETSCREENINDEX} from '../../../utils/commonUtils'
-import ScrollService from '../../../utils/ScrollService'
+import ScrollService from '../../../utils/ScrollService.js'
 import {RxHamburgerMenu} from 'react-icons/rx'
 import {HiOutlineCodeBracketSquare} from 'react-icons/hi2'
 import './Header.css'
@@ -25,21 +25,26 @@ const Header = () => {
             ))
         )
     }
-
+    
+    const getHeaderOptionClass = (i) => {
+        let classes = 'header-option '
+        if (i < TOTALSCREENS.length -1) classes += 'header-option-separator '
+        if (selectedScreen === i) classes += 'selected-header-option '
+        return classes
+    }
     const switchScreen = (i, screen) => {
         let screenComponent = document.getElementById(screen.screenName)
         if (!screenComponent) return
-        screenComponent.scrollIntoView( {behavior: 'smooth'})
+        screenComponent.scrollIntoView({behavior: 'smooth'})
         setSelectedScreen(i)
         setShowHeaderOptions(false)
     }
 
-    const getHeaderOptionClass = (i) => {
-        let classes = 'header-option'
-        if (i < TOTALSCREENS.length -1) classes += 'header-option-separator'
-        if (selectedScreen === i) classes += 'selected-header-option'
-        return
-    }
+    useEffect(() => {
+        return () => {
+            currentScreenSubscription.unsubscribe();
+        };
+    }, [currentScreenSubscription]);
 
     return (
         <>

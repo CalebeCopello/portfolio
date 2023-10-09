@@ -2,6 +2,7 @@ import React from 'react'
 import {FaGithub, FaLinkedin} from 'react-icons/fa'
 import Typed from 'typed.js'
 import './Profile.css'
+import Buttons from '../../../utils/Buttons/Buttons'
 
 const Profile = () => {
   // Create reference to store the DOM element containing the animation
@@ -59,12 +60,7 @@ const Profile = () => {
                             </span>
                         </div>
                         <div className="profile-options">
-                            <button className="standard-btn btn">
-                                Me contrate
-                            </button>
-                            <a href="./calebeCopello.pdf" download='Calebe Copello.pdf'>
-                                <button className="highlighted-btn btn">Baixar CV</button>
-                            </a>
+                            <Buttons />
                         </div>
                     </div>
                     <div className="profile-picture">

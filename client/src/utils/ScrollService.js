@@ -1,4 +1,4 @@
-import { TOTALSCREENS } from './commonUtils'
+import { TOTALSCREENS } from './commonUtils.js'
 import {Subject} from 'rxjs'
 
 
@@ -11,7 +11,7 @@ export default class ScrollService {
         window.addEventListener('scroll', this.checkCurrentScreenUnderViewport)
     }
     scrollToHireMe = () => {
-        let contactMeScreen = document.getElementById('contactMe')
+        let contactMeScreen = document.getElementById('ContactMe')
         if (!contactMeScreen) return
         contactMeScreen.scrollIntoView({behavior: 'smooth'})
     }
@@ -51,7 +51,7 @@ export default class ScrollService {
                     ScrollService.currentScreenFadeIn.next({
                         fadeInScreen: screen.screenName
                     })
-                    screen['alredyRendered'] = true
+                    screen['alreadyRendered'] = true
                     break
                 }
                 if (fullyVisible) {
