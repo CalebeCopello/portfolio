@@ -1,9 +1,14 @@
 import Home from "../PortfolioContainer/Home/Home";
+import AboutMe from "../PortfolioContainer/AboutMe/AboutMe";
 
 export const TOTALSCREENS = [
     {
         screenName: 'Home',
         component: Home,
+    },
+    {
+        screenName: 'AboutMe',
+        component: AboutMe,
     },
 ]
 

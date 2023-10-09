@@ -97,3 +97,20 @@
   /* Custom */
   --textContrast-fg4: #FFFFFA;
 }
+
+@font-face {
+  font-family: JetBrainsMono;
+  src: url(./assets/fonts/JetBrainsMono-Regular.ttf);
+}
+@font-face {
+  font-family: OnestSanSerif;
+  src: url(./assets/fonts/Onest-Regular.ttf);
+}
+@font-face {
+  font-family: YoungSerif;
+  src: url(./assets/fonts/YoungSerif-Regular.ttf);
+}
+@font-face {
+  font-family: Joystix;
+  src: url(./assets/fonts/Joystix.otf);
+}
