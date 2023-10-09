@@ -39,3 +39,15 @@
 .selected-header-option {
     color: var(--orange0);
 }
+
+@media only screen and (max-width: 1110px) {
+    .header-parent {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 970px) {
+    .header-hamburger {
+        display: flex;
+    }
+}
