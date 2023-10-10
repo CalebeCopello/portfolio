@@ -110,9 +110,20 @@
     color: var(--fg0);
     margin-top: 10px;
 }
+.resume-certification-container .resume-sub-heading {
+    font-size: 14px;
+}
+.resume-certification-container a {
+    color: var(--fg0);
+    text-decoration: none;
+}
 .resume-heading-description {
     font-size: 12px;
     text-align: justify;
+    font-family: OnestSanSerif;
+}
+.resume-certification-container .resume-heading-description {
+    font-size: 12px;
 }
 .heading-date {
     margin-right: 3px;

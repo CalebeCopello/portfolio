@@ -5,10 +5,10 @@ import Animations from '../../utils/Animations'
 import { IoSchoolOutline } from "react-icons/io5";
 import {MdOutlineWorkOutline} from 'react-icons/md'
 import { RiCodeSSlashFill } from "react-icons/ri";
-import { VscFileCode } from "react-icons/vsc";
 import { SiStartrek } from "react-icons/si";
 import { BiLogoJavascript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoHtml5, BiLogoCss3 } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
+import { PiCertificateBold } from "react-icons/pi";
 import './Resume.css'
 
 const Resume = (props) => {
@@ -49,7 +49,7 @@ const Resume = (props) => {
         {label: 'Educação', logoScr: <IoSchoolOutline />},
         {label: 'Empregos', logoScr: <MdOutlineWorkOutline />},
         {label: 'Linguagens de Programação', logoScr: <RiCodeSSlashFill />},
-        {label: 'Projetos', logoScr: <VscFileCode />},
+        {label: 'Certificações', logoScr: <PiCertificateBold />},
         {label: 'Outros interesses', logoScr: <SiStartrek />},
     ]
     const programmingSkillDetails = [
@@ -61,18 +61,35 @@ const Resume = (props) => {
         {skill: 'Express JS', logoScr: <SiExpress />},
         {skill: 'Mongo DB', logoScr: <BiLogoMongodb />},
     ]
-    const projectDetails = [
-        {title: 'Marvel Hero Search', url: 'https://github.com/CalebeCopello', subHeading: <> Tecnologias usadas: <BiLogoHtml5 /> <BiLogoCss3 /> <BiLogoJavascript /> </>, description: 'Marvel Hero Search'},
+    //TODO: Change to certifications
+    const certificationDetails = [
+        {title: 'CC50: Introdução à Ciência da Computação', url: './CalebeCopello-CS50.pdf', subHeading: 'O Curso de Harvard, no Brasil [ORIGINAL][LEGENDADO]', description: 'O curso CS50 é curso presencial e online de ciência da computação da Universidade de Harvard e, desde 2015, também da Universidade Yale.'},
+        {title: 'CC50: Introdução à Ciência da Computação', url: './CalebeCopello-CS50.pdf', subHeading: 'O Curso de Harvard, no Brasil [ORIGINAL][LEGENDADO]', description: 'O curso CS50 é curso presencial e online de ciência da computação da Universidade de Harvard e, desde 2015, também da Universidade Yale.'},
+        {title: 'CC50: Introdução à Ciência da Computação', url: './CalebeCopello-CS50.pdf', subHeading: 'O Curso de Harvard, no Brasil [ORIGINAL][LEGENDADO]', description: 'O curso CS50 é curso presencial e online de ciência da computação da Universidade de Harvard e, desde 2015, também da Universidade Yale.'},
         {title: 'GeekShop', url: 'https://github.com/CalebeCopello', subHeading: <> Tecnologias usadas: <BiLogoHtml5 /> <BiLogoCss3 /> <BiLogoJavascript /> </> , description: 'Geek Ecommerce'},
     ]
     const interestsDetails = [
+        {heading: 'SciFi', description: 'Adoro assistir filmes/séries de ficção científica!'},
         {heading: 'SciFi', description: 'Adoro assistir filmes/séries de ficção científica!'},
     ]
     const resumeDetails = [
         <div className="resume-screen-container" key='education'>
             <ResumeHeading heading={'FURG'} subHeading={'Letras'} fromDate={'2009'} toDate={'2014'} />
+            <ResumeHeading heading={'FURG'} subHeading={'Letras'} fromDate={'2009'} toDate={'2014'} />
+            <ResumeHeading heading={'FURG'} subHeading={'Letras'} fromDate={'2009'} toDate={'2014'} />
         </div>,
         <div className="resume-screen-container" key='work-experience'>
+            <ResumeHeading heading={'CCAA'} subHeading={'Instrutor de Idiomas'} fromDate={'2018'} toDate={'2023'} />
+            <div className="experience-description">
+                <span className='resume-description-text'>
+                    Dei várias aula.
+                </span>
+            </div>
+            <div className="resume-description-text">
+            <span className='resume-description-text'>
+                    Dei muitas.
+                </span>
+            </div>
             <ResumeHeading heading={'CCAA'} subHeading={'Instrutor de Idiomas'} fromDate={'2018'} toDate={'2023'} />
             <div className="experience-description">
                 <span className='resume-description-text'>
@@ -90,7 +107,7 @@ const Resume = (props) => {
                 <div className="skill-parent" key={index}>
                     <div className="heading-bullet"></div>
                     <div className="skill-wrapper">
-                        <span className='skill-name'>{skill.skill}</span>
+                        <span className=''>{skill.skill}</span>
                         <div className="skill-logo">
                             <div>{skill.logoScr}</div>
                         </div>
@@ -98,9 +115,11 @@ const Resume = (props) => {
                 </div>
             ))}
         </div>,
-        <div className="resume-screen-container" key='projects'>
-            {projectDetails.map((projectDetails, index) => (
-                <ResumeHeading key={index} heading={projectDetails.title} subHeading={projectDetails.subHeading} description={projectDetails.description} url={projectDetails.url} />
+        <div className="resume-screen-container" key='certifications'>
+            {certificationDetails.map((certificationDetails, index) => (
+                <div className='resume-certification-container'>
+                <ResumeHeading key={index} heading={<a href={certificationDetails.url}> {certificationDetails.title} </a>} subHeading={certificationDetails.subHeading} description={certificationDetails.description} />
+                </div>
             ))}
         </div>,
         <div className="resume-screen-container" key='interests'>
