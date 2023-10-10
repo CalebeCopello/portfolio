@@ -9,6 +9,7 @@ import { VscFileCode } from "react-icons/vsc";
 import { SiStartrek } from "react-icons/si";
 import { BiLogoJavascript, BiLogoReact, BiLogoNodejs, BiLogoMongodb, BiLogoHtml5, BiLogoCss3 } from "react-icons/bi";
 import { SiExpress } from "react-icons/si";
+import './Resume.css'
 
 const Resume = (props) => {
     const [selectedBulletIndex, setSelectedBulletIndex] = useState(0)
@@ -24,7 +25,7 @@ const Resume = (props) => {
         return (
         <div className="resume-heading">
             <div className="resume-main-heading">
-                <div className="heading-bullet">
+                <div className="heading-bullet"></div>
                     <span>{props.heading ? props.heading : ''}</span>
                     {props.fromDate && props.toDate ? (
                         <div className="heading-date">
@@ -41,7 +42,6 @@ const Resume = (props) => {
                     <span>{props.description ? props.description : ''}</span>
                 </div>
             </div>
-        </div>
         )
     }
 
@@ -85,11 +85,12 @@ const Resume = (props) => {
                 </span>
             </div>
         </div>,
-        <div className="resume-screen-container programming-skills-container" key='programming-skiils'>
+        <div className="resume-screen-container programming-skills-container" key='programming-skills'>
             {programmingSkillDetails.map((skill,index) => (
                 <div className="skill-parent" key={index}>
-                    <div className="heading-bullet">
-                        <span>{skill.skill}</span>
+                    <div className="heading-bullet"></div>
+                    <div className="skill-wrapper">
+                        <span className='skill-name'>{skill.skill}</span>
                         <div className="skill-logo">
                             <div>{skill.logoScr}</div>
                         </div>
@@ -122,15 +123,16 @@ const Resume = (props) => {
         return resumeBullets.map((bullet, index) => (
             <div onClick={() => handleCarousal(index)} className={index === selectedBulletIndex ? 'bullet selected-bullet' : 'bullet'} key={index}>
                 <div className="bullet-logo">
-                    {bullet.logoScr}
+                    {bullet.logoScr} 
                 </div>
+                    <span className="bullet-label">{bullet.label}</span>
             </div>
         ))
     }
 
     const getResumeScreen = () => {
         return (
-            <div style={carousalOffSetStyle} className="resume-details-carousal">
+            <div style={carousalOffSetStyle.style} className="resume-details-carousal">
                 {resumeDetails.map((ResumeDetail) => ResumeDetail)}
             </div>
         )
