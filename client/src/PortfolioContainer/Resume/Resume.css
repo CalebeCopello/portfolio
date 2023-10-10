@@ -13,7 +13,7 @@
 }
 .resume-bullets {
     height: 100%;
-    box-shadow: 15px 0 9px -15px rgba(0, 0, 0, 0.468);
+    box-shadow: 15px 0 9px -15px rgba(0, 0, 0, 0.4);
     width: 320px;
 }
 .resume-bullet-details {
@@ -152,3 +152,49 @@
     font-size: 30px;
     filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
 }
+
+@media only screen and (max-width: 1110px) {
+    .resume-card {
+        width: 780px;
+    }
+    .bullet-label {
+        font-size: 12px;
+    }
+
+    .resume-bullet-details {
+        padding: 0 0 0 70px;
+    }
+}
+@media only screen and (max-width: 898px) {
+    .resume-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .resume-card {
+        width: 350px;
+        height: fit-content;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .bullet-label {
+        font-size: 14px;
+    }
+
+    .resume-bullet-details {
+        height: 360px;
+        width: 350px;
+        padding-left: 35px;
+        margin-top: 5px;
+    }
+    .resume-bullets {
+        margin: 0px 0;
+        width: 100%;
+        box-shadow: 0 15px 9px -15px rgba(0, 0, 0, 0.4);
+    }
+    
+    .selected-bullet {
+        width: 100%;
+    }
+} 
