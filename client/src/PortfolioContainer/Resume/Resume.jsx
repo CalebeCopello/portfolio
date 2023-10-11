@@ -61,9 +61,7 @@ const Resume = (props) => {
         {skill: 'Express JS', logoScr: <SiExpress />},
         {skill: 'Mongo DB', logoScr: <BiLogoMongodb />},
     ]
-    //TODO: Change to certifications
     const certificationDetails = [
-        {title: 'CC50: Introdução à Ciência da Computação', url: './CalebeCopello-CS50.pdf', subHeading: 'O Curso de Harvard, no Brasil [ORIGINAL][LEGENDADO]', description: 'O curso CS50 é curso presencial e online de ciência da computação da Universidade de Harvard e, desde 2015, também da Universidade Yale.'},
         {title: 'CC50: Introdução à Ciência da Computação', url: './CalebeCopello-CS50.pdf', subHeading: 'O Curso de Harvard, no Brasil [ORIGINAL][LEGENDADO]', description: 'O curso CS50 é curso presencial e online de ciência da computação da Universidade de Harvard e, desde 2015, também da Universidade Yale.'},
         {title: 'CC50: Introdução à Ciência da Computação', url: './CalebeCopello-CS50.pdf', subHeading: 'O Curso de Harvard, no Brasil [ORIGINAL][LEGENDADO]', description: 'O curso CS50 é curso presencial e online de ciência da computação da Universidade de Harvard e, desde 2015, também da Universidade Yale.'},
         {title: 'GeekShop', url: 'https://github.com/CalebeCopello', subHeading: <> Tecnologias usadas: <BiLogoHtml5 /> <BiLogoCss3 /> <BiLogoJavascript /> </> , description: 'Geek Ecommerce'},
