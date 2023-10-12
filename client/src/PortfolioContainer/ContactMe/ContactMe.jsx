@@ -44,6 +44,16 @@ const ContactMe = (props) => {
     const [banner, setBanner] = useState('')
     const [bool, setBool] = useState(false)
 
+    const handleName = (e) => {
+        setName(e.target.value)
+    }
+    const handleEmail = (e) => {
+        setEmail(e.target.value)
+    }
+    const handleMessage = (e) => {
+        setMessage(e.target.value)
+    }
+
     return (
         <>
         <div className="contact-container" id={props.id || ''}></div>
@@ -55,12 +65,12 @@ const ContactMe = (props) => {
             <h4>Entre em contato por aqui!</h4>
             <form action="">
                 {/* <p>{banner}</p> */}
-                <label htmlFor="name">Nome:</label>
+                <label htmlFor="name" value={name} onChange={handleName}>Nome:</label>
                 <input type="text" placeholder='Coloque seu nome aqui'/>
-                <label htmlFor="email">E-mail:</label>
+                <label htmlFor="email" value={email} onChange={handleEmail}>E-mail:</label>
                 <input type="email" placeholder='Coloque seu e-mail aqui'/>
                 <label htmlFor="message">Mensagem:</label>
-                <textarea name="text" rows="4" cols="50" placeholder='Escreva sua mensagem aqui'/>
+                <textarea name="text" rows="4" cols="50" value={message} onChange={handleMessage} placeholder='Escreva sua mensagem aqui'/>
                 <div className="send-btn-container">
                 <button className="send-btn btn">
                     Enviar <FaRegPaperPlane />
