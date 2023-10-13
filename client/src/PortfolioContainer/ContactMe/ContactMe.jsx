@@ -1,6 +1,8 @@
 import React, { useState } from 'react'
 import Typed from 'typed.js'
 import { FaRegPaperPlane } from "react-icons/fa";
+import axios from 'axios'
+import {toast} from 'react-toastify'
 import ScreenHeading from '../../utils/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utils/ScrollService'
 import Animations from '../../utils/Animations'
@@ -53,6 +55,30 @@ const ContactMe = (props) => {
     const handleMessage = (e) => {
         setMessage(e.target.value)
     }
+    const submitForm = async (e) => {
+        e.preventDefault()
+        try {
+            let data = {
+                name,
+                email,
+                message,
+            }
+            setBool(true)
+            const res = await axios.post(`/contact`, data)
+            if (name.length === 0 || email.length === 0 || message.length === 0) {
+                setBanner(res.data.msg)
+                toast.error(res.data.msg)
+                setBool(false)
+            } else if (res.status === 200) {
+                setBanner(res.data.msg)
+                toast.error(res.data.msg)
+                setBool(false)
+            }
+            
+        } catch (err) {
+            toast.error(err)
+        }
+    }
 
     return (
         <>
@@ -69,7 +95,7 @@ const ContactMe = (props) => {
                     </div>
                 </div>
                 <div className="back-form">
-                    <form action="">
+                    <form onSubmit={submitForm}>
                         <p>{banner}</p>
                         <label htmlFor="name" value={name} onChange={handleName}>Nome:</label>
                         <input type="text" placeholder='Coloque seu nome aqui'/>
