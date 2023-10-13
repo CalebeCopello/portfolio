@@ -31,10 +31,9 @@
 .owl-nav {
     position: relative;
     font-size: 30px;
-    left: 50%;
-    right: -49%;
-    margin-top: 20px;
-    width: 25px;
+    margin: 10px auto;
+    left: -15px;
+    width: 30px;
     color: var( --textContrast-fg4);
 }
 .owl-nav :hover {
