@@ -56,27 +56,35 @@ const ContactMe = (props) => {
 
     return (
         <>
-        <div className="contact-container" id={props.id || ''}></div>
-        <ScreenHeading title={'Contato'} subHeading={'Entre em contato'} />
-        <h2 className='contact-typed'>
-            <span ref={el} className='typejs-profile'/>
-        </h2>
-        <div className="back-form">
-            <h4>Entre em contato por aqui!</h4>
-            <form action="">
-                {/* <p>{banner}</p> */}
-                <label htmlFor="name" value={name} onChange={handleName}>Nome:</label>
-                <input type="text" placeholder='Coloque seu nome aqui'/>
-                <label htmlFor="email" value={email} onChange={handleEmail}>E-mail:</label>
-                <input type="email" placeholder='Coloque seu e-mail aqui'/>
-                <label htmlFor="message">Mensagem:</label>
-                <textarea name="text" rows="4" cols="50" value={message} onChange={handleMessage} placeholder='Escreva sua mensagem aqui'/>
-                <div className="send-btn-container">
-                <button className="send-btn btn">
-                    Enviar <FaRegPaperPlane />
-                </button>
+        <div className="contact-container" id={props.id || ''}>
+            <ScreenHeading title={'Contato'} subHeading={'Entre em contato'} />
+            <div className="central-form">
+                <div className='contact-texts'>
+                <h2 className='contact-typed'>
+                    <span ref={el} className='typejs-contact'/>
+                </h2>
+                    {/* <h4>Entre em contato por aqui!</h4> */}
+                    <div className="contact-img">
+                    <img src="/img/contact/contact.jpg" alt='imagem de email'/>
+                    </div>
                 </div>
-            </form>
+                <div className="back-form">
+                    <form action="">
+                        <p>{banner}</p>
+                        <label htmlFor="name" value={name} onChange={handleName}>Nome:</label>
+                        <input type="text" placeholder='Coloque seu nome aqui'/>
+                        <label htmlFor="email" value={email} onChange={handleEmail}>E-mail:</label>
+                        <input type="email" placeholder='Coloque seu e-mail aqui'/>
+                        <label htmlFor="message">Mensagem:</label>
+                        <textarea name="text" rows="4" cols="50" value={message} onChange={handleMessage} placeholder='Escreva sua mensagem aqui'/>
+                        <div className="send-btn-container">
+                        <button className="highlighted-btn btn">
+                            Enviar <FaRegPaperPlane />
+                        </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
         </>
     )
