@@ -7,10 +7,9 @@ import './AboutMe.css'
 
 const AboutMe = (props) => {
     const fadeInScreenHandler = (screen) => {
-        if (screen.fadeScreen !== props.id) return
+        if (screen.fadeInScreen !== props.id) return
         Animations.animations.fadeInScreen(props.id)
     }
-    // const fadeInSubscription = 
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
     const ABOUTME = {
@@ -40,7 +39,7 @@ const AboutMe = (props) => {
 
     return (
         <>
-        <div className="about-me-container screen-container" id={props.id || ''}>
+        <div className="about-me-container screen-container fade-in" id={props.id || ''}>
             <div className="about-me-parent">
                 <ScreenHeading title={'Sobre Mim'} subHeading={'Por que me escolher?'} />
                 <div className="about-me-card">

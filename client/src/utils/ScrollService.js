@@ -11,7 +11,7 @@ export default class ScrollService {
         window.addEventListener('scroll', this.checkCurrentScreenUnderViewport)
     }
     scrollToHireMe = () => {
-        let contactMeScreen = document.getElementById('ContactMe')
+        let contactMeScreen = document.getElementById('Contato')
         if (!contactMeScreen) return
         contactMeScreen.scrollIntoView({behavior: 'smooth'})
     }

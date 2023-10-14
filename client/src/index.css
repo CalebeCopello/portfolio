@@ -46,3 +46,8 @@
   box-shadow: 1px 1px rgba(0, 0, 0, 0.4);
   transition: 0.3s;
 }
+.fade-in {
+  opacity: 0;
+  transform: translateY(80px);
+  transition: all 1.3s ease;
+}

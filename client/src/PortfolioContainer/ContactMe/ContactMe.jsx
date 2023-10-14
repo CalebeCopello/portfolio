@@ -35,7 +35,7 @@ const ContactMe = (props) => {
     }, [])
 
     const fadeInScreenHandler = (screen) => {
-        if (screen.fadeScreen !== props.id) return
+        if (screen.fadeInScreen !== props.id) return
         Animations.animations.fadeInScreen(props.id)
     }
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
@@ -82,7 +82,7 @@ const ContactMe = (props) => {
 
     return (
         <>
-        <div className="contact-container" id={props.id || ''}>
+        <div className="contact-container fade-in" id={props.id || ''}>
             <ScreenHeading title={'Contato'} subHeading={'Entre em contato'} />
             <div className="central-form">
                 <div className='contact-texts'>

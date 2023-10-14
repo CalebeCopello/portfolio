@@ -13,7 +13,7 @@ import Footer from '../Home/Footer/Footer'
 const Projects = (props) => {
 
     const fadeInScreenHandler = (screen) => {
-        if (screen.fadeScreen !== props.id) return
+        if (screen.fadeInScreen !== props.id) return
         Animations.animations.fadeInScreen(props.id)
     }
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
@@ -48,7 +48,7 @@ const Projects = (props) => {
         <>
             <div>
                 <ScreenHeading title={'Projetos'} subHeading={'Aqui estão alguns dos meus projetos'} />
-                <section className="projects-section" id={props.id || ''}>
+                <section className="projects-section fade-in" id={props.id || ''}>
                 <div className="container">
                     <div className="row">
                         <OwlCarousel className='owl-carousel' id='projects-carousel' {...carouselOptions} >
