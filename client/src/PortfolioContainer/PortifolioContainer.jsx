@@ -10,9 +10,10 @@ const PortfolioContainer = () => {
     }
     return (
         <>
-        <div className="portifolio-container">
-            {mapAllScreens()}
-        </div>
+            <div className="portifolio-container">
+
+                {mapAllScreens()}
+            </div>
         </>
     )
 }
