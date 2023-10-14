@@ -1,18 +1,18 @@
-const router = require(express).router()
-const nodemailer = require(nodemailer)
+const router = require('express').Router()
+const nodemailer = require('nodemailer')
 require('dotenv').config
 
 router.post('/contact', (req, res) => {
     let data = req.body
     if (data.name.length === 0 || data.email.length === 0 || data.message.length === 0) {
-        return res.json({msg: "Preencha todos os campos"})
+        return res.json({msg: "Preencha todos os campos!"})
     }
     let smtpTransporter = nodemailer.createTransport({
-        servide: 'Gmail',
+        service: 'Gmail',
         port: 456,
         auth:{
             user: 'calebecopello@gmail.com',
-            pass: process.env.EMAIL_PASSWORD,
+            pass: 'pvqk yqnv faek cmjc',
         }
     })
     let mailOptions = {
@@ -32,7 +32,10 @@ router.post('/contact', (req, res) => {
     }
     smtpTransporter.sendMail(mailOptions,(error) => {
         try {
-            if(error) return res.status(400).json({msg: 'Preencha todos os campos'})
+            if(error) {
+                console.log(error)
+                return res.status(400).json({msg: 'Preencha todos os campos'})
+            } 
             res.status(200).json({msg: 'Obrigado pelo contato!'})
         } catch (error) {
             if (error) return res.status(500).json({msg: 'Houve um erro!'})

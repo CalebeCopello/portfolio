@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import Typed from 'typed.js'
 import { FaRegPaperPlane } from "react-icons/fa";
 import axios from 'axios'
-import {toast} from 'react-toastify'
+import { toast } from 'react-toastify'
 import ScreenHeading from '../../utils/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utils/ScrollService'
 import Animations from '../../utils/Animations'
@@ -71,8 +71,12 @@ const ContactMe = (props) => {
                 setBool(false)
             } else if (res.status === 200) {
                 setBanner(res.data.msg)
-                toast.error(res.data.msg)
+                toast.success(res.data.msg)
                 setBool(false)
+                
+                setName("");
+                setEmail("");
+                setMessage("");
             }
             
         } catch (err) {
@@ -89,7 +93,6 @@ const ContactMe = (props) => {
                 <h2 className='contact-typed'>
                     <span ref={el} className='typejs-contact'/>
                 </h2>
-                    {/* <h4>Entre em contato por aqui!</h4> */}
                     <div className="contact-img">
                     <img src="/img/contact/contact.jpg" alt='imagem de email'/>
                     </div>
@@ -97,10 +100,10 @@ const ContactMe = (props) => {
                 <div className="back-form">
                     <form onSubmit={submitForm}>
                         <p>{banner}</p>
-                        <label htmlFor="name" value={name} onChange={handleName}>Nome:</label>
-                        <input type="text" placeholder='Coloque seu nome aqui'/>
-                        <label htmlFor="email" value={email} onChange={handleEmail}>E-mail:</label>
-                        <input type="email" placeholder='Coloque seu e-mail aqui'/>
+                        <label htmlFor="name">Nome:</label>
+                        <input type="text" value={name} onChange={handleName} placeholder='Coloque seu nome aqui'/>
+                        <label htmlFor="email">E-mail:</label>
+                        <input type="email" value={email} onChange={handleEmail} placeholder='Coloque seu e-mail aqui'/>
                         <label htmlFor="message">Mensagem:</label>
                         <textarea name="text" rows="4" cols="50" value={message} onChange={handleMessage} placeholder='Escreva sua mensagem aqui'/>
                         <div className="send-btn-container">
@@ -108,6 +111,11 @@ const ContactMe = (props) => {
                             Enviar <FaRegPaperPlane />
                         </button>
                         </div>
+                    {bool ? (
+                        <div class="lds-ellipsis"><div></div><div></div><div></div><div></div></div>
+                    ) : (
+                        ""
+                    )}
                     </form>
                 </div>
             </div>
