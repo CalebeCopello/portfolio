@@ -47,9 +47,9 @@ const Projects = (props) => {
     return (
         <>
             <div>
-                <ScreenHeading title={'Projetos'} subHeading={'Aqui estão alguns dos meus projetos'} />
                 <section className="projects-section fade-in" id={props.id || ''}>
-                <div className="container">
+                <ScreenHeading title={'Projetos'} subHeading={'Aqui estão alguns dos meus projetos'} />
+                <div className="projects-container">
                     <div className="row">
                         <OwlCarousel className='owl-carousel' id='projects-carousel' {...carouselOptions} >
                             <div className="col-lg-12">

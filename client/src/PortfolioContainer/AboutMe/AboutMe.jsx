@@ -1,4 +1,3 @@
-import {useEffect} from 'react'
 import ScreenHeading from '../../utils/ScreenHeading/ScreenHeading'
 import ScrollService from '../../utils/ScrollService'
 import Animations from '../../utils/Animations'
@@ -15,7 +14,7 @@ const AboutMe = (props) => {
     const ABOUTME = {
         description: 'Sou Calebe Soares Copello, apaixonado por tecnologia, ficção científica e jogos. Graduado em Letras Português/Inglês, com mestrado em Linguística, agora explorando Análise e Desenvolvimento de Sistemas. Professor por cinco anos, atualmente foco em JavaScript, ReactJS e NodeJS. Acredito em uma abordagem guiada pela curiosidade incansável, unida à dedicação à pesquisa em busca de soluções para problemas.',
         highlights: {
-            heading: "Aqui temos alguns destaques:",
+            heading: "Destaques",
             bullets:[
                 "Graduado em Letras Português/Inglês, mestre em Linguística e estudande de Tecnologia.",
                 "Especializando-se em JavaScript, ReactJS e NodeJS",

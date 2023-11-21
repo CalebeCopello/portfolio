@@ -11,6 +11,7 @@
 .about-me-card{
     display: flex;
     width: 100%;
+    border-radius: 5px;
     box-shadow: 0 0px 20px -2px rgba(0, 0, 0, 0.5);
 }
 .about-me-profile {
@@ -18,7 +19,7 @@
     background-image: url('../../assets/AboutMe/me.jpg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: 0% 30%;
+    background-position: 0% 40%;
 }
 .about-me-details {
     width: 60%;

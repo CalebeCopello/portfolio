@@ -1,4 +1,7 @@
 .projects-section {
+    margin-top: 40px;
+}
+.projects-container {
     padding: 40px 80px 0 80px;
     background-color: var(--fg0);
     color: var( --textContrast-fg4);

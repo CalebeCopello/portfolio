@@ -8,7 +8,7 @@ const Buttons = () => {
             <button className="standard-btn btn" onClick={() => ScrollService.scrollHandler.scrollToHireMe()}>
                 Me contrate
             </button>
-            <a href="./calebeCopello.pdf" download='Calebe Copello.pdf'>
+            <a href="/pdfs/Calebe-Copello[CV].pdf" download='Calebe-Copello[CV].pdf'>
                 <button className="highlighted-btn btn">Baixar CV</button>
             </a>
         </>

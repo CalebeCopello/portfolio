@@ -51,21 +51,3 @@
   transform: translateY(80px);
   transition: all 1.3s ease;
 }
-.sticky-div {
-  position: sticky;
-  font-size: 30px;
-  color: var(--orange0);
-  height: 30px;
-  width: 30px;
-  bottom: 50px;
-  margin-left: 95%;
-  padding: 10px;
-  z-index: 100;
-  cursor: pointer;
-}
-@media only screen and (max-width: 468px) {
-  .sticky-div {
-      font-size: 25px;
-      margin-left: 90%;
-  }
-}
