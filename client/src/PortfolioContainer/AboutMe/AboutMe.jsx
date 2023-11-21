@@ -13,15 +13,15 @@ const AboutMe = (props) => {
     ScrollService.currentScreenFadeIn.subscribe(fadeInScreenHandler)
 
     const ABOUTME = {
-        description: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi id officia consequatur earum cum nam delectus adipisci, ad assumenda accusamus officiis eligendi dignissimos rerum consequuntur qui animi possimus minus consectetur.',
+        description: 'Sou Calebe Soares Copello, apaixonado por tecnologia, ficção científica e jogos. Graduado em Letras Português/Inglês, com mestrado em Linguística, agora explorando Análise e Desenvolvimento de Sistemas. Professor por cinco anos, atualmente foco em JavaScript, ReactJS e NodeJS. Acredito em uma abordagem guiada pela curiosidade incansável, unida à dedicação à pesquisa em busca de soluções para problemas.',
         highlights: {
             heading: "Aqui temos alguns destaques:",
             bullets:[
-                "Bullet 1",
-                "Bullet 2",
-                "Bullet 3",
-                "Bullet 4",
-                "Bullet 5",
+                "Graduado em Letras Português/Inglês, mestre em Linguística e estudande de Tecnologia.",
+                "Especializando-se em JavaScript, ReactJS e NodeJS",
+                "Projetos notáveis incluem um eCommerce e um jogo de adivinhação de Pokémon.",
+                "Habilidades distintivas: curiosidade, vontade de aprender e intransigência diante de desafios.",
+                "Um ótima capacidade comunicativa, tanto para ouvir quanto para explicar",
             ]
         }
     }
