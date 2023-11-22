@@ -1,224 +1,227 @@
 .resume-container {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    justify-content: center;
-    min-height: fit-content;
-    margin: 120px 0;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	min-height: fit-content;
+	margin: 120px 0;
 }
 .resume-card {
-    display: flex;
-    height: 360px;
-    width: 1000px;
+	display: flex;
+	height: 360px;
+	width: 1000px;
 }
 .resume-bullets {
-    height: 100%;
-    box-shadow: 15px 0 9px -15px rgba(0, 0, 0, 0.4);
-    width: 320px;
+	height: 100%;
+	box-shadow: 15px 0 9px -15px rgba(0, 0, 0, 0.4);
+	width: 320px;
 }
 .resume-bullet-details {
-    flex-grow: 1;
-    width: 600px;
-    overflow: hidden;
-    padding-left: 70px;
+	flex-grow: 1;
+	width: 600px;
+	overflow: hidden;
+	padding-left: 70px;
 }
 .experience-description {
-    display: flex;
-    text-align: justify;
-    max-width: 100%;
+	display: flex;
+	text-align: justify;
+	max-width: 100%;
 }
 .resume-details-carousal {
-    transition: transform 1s ease-out;
+	transition: transform 1s ease-out;
 }
 .bullet-container {
-    display: flex;
-    align-items: center;
-    height: 100%;
-    width: 100%;
-    position: relative;
+	display: flex;
+	align-items: center;
+	height: 100%;
+	width: 100%;
+	position: relative;
 }
 .bullets {
-    width: 90%;
-    position: relative;
-    z-index: 2;
+	width: 90%;
+	position: relative;
+	z-index: 2;
 }
 .bullet {
-    display: flex;
-    align-items: center;
-    background-color: var(--fg0);
-    height: 40px;
-    margin: 15px 0;
-    padding:  0 8px;
-    border-radius: 20px;
-    width: 30px;
-    transition:  width 0.6s ease;
-    cursor: pointer;
+	display: flex;
+	align-items: center;
+	background-color: var(--fg0);
+	height: 40px;
+	margin: 15px 0;
+	padding: 0 8px;
+	border-radius: 20px;
+	width: 30px;
+	transition: width 0.6s ease;
+	cursor: pointer;
 }
 .bullet-label {
-    font-size: 14px;
-    white-space: nowrap;
-    font-weight: 600;
-    font-family: JetBrainsMono;
+	font-size: 14px;
+	white-space: nowrap;
+	font-weight: 600;
+	font-family: JetBrainsMono;
 }
 .bullet-logo {
-    display: inline;
-    height: 16px;
-    margin-right: 30px;
-    color: var(--textContrast-fg4);
+	display: inline;
+	height: 16px;
+	margin-right: 30px;
+	color: var(--textContrast-fg4);
 }
 .bullet-icons {
-    width: 34px;
-    height: 100%;
-    z-index: 1;
-    background-color: var(--fg0);
-    position: absolute;
+	width: 34px;
+	height: 100%;
+	z-index: 1;
+	background-color: var(--fg0);
+	position: absolute;
 }
 .selected-bullet {
-    color: var(--textContrast-fg4);
-    width: 100%;
+	color: var(--textContrast-fg4);
+	width: 100%;
 }
 .resume-screen-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    height: 360px;
-    width: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-evenly;
+	height: 360px;
+	width: 100%;
 }
 .resume-heading {
-    font-family: YoungSerif;
-    display: flex;
-    flex-direction: column;
+	font-family: YoungSerif;
+	display: flex;
+	flex-direction: column;
 }
 .resume-main-heading {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+}
+.resume-main-heading svg {
+    margin-left: 1rem;
 }
 .heading-bullet {
-    position: absolute;
-    left: -30px;
-    height: 15px;
-    width: 15px;
-    top: 5px;
-    background-color: var(--orange0);
-    border-radius: 50%;
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+	position: absolute;
+	left: -30px;
+	height: 15px;
+	width: 15px;
+	top: 5px;
+	background-color: var(--orange0);
+	border-radius: 50%;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 .resume-sub-heading {
-    font-size: 16px;
-    font-family: OnestSanSerif;
-    color: var(--fg0);
-    margin-top: 10px;
+	font-size: 16px;
+	font-family: OnestSanSerif;
+	color: var(--fg0);
+	margin-top: 10px;
 }
 .resume-certification-container .resume-sub-heading {
-    font-size: 14px;
+	font-size: 14px;
 }
 .resume-certification-container a {
-    color: var(--fg0);
-    text-decoration: none;
+	color: var(--fg0);
+	text-decoration: none;
 }
 .resume-heading-description {
-    font-size: 12px;
-    text-align: justify;
-    font-family: OnestSanSerif;
+	font-size: 12px;
+	text-align: justify;
+	font-family: OnestSanSerif;
 }
 .resume-certification-container .resume-heading-description {
-    font-size: 12px;
+	font-size: 12px;
 }
 .resume-description-text {
-    margin-top: -70px;
-    width: 95%;
-    font-size: 12px;
-    text-align: justify;
-    font-family: OnestSanSerif;
+	margin-top: -70px;
+	width: 95%;
+	font-size: 12px;
+	text-align: justify;
+	font-family: OnestSanSerif;
 }
 .heading-date {
-    margin-right: 3px;
-    background-color: var(--orange0);
-    padding: 4px 12px;
-    font-size: 14px;
-    border-radius: 14px;
-    color: var(--textContrast-fg4);
-    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
+	margin-right: 3px;
+	background-color: var(--orange0);
+	padding: 4px 12px;
+	font-size: 14px;
+	border-radius: 14px;
+	color: var(--textContrast-fg4);
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.25);
 }
 .skill-parent {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    width: 50%;
-    margin: 10px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	width: 50%;
+	margin: 10px;
 }
 .skill-wrapper {
-    display: flex;
-    justify-content: space-between;
-    height: 4rem;
+	display: flex;
+	justify-content: space-between;
+	height: 4rem;
 }
 .skill-wrapper svg {
-    margin-right: 10rem;
-    height: 5rem;
-    margin-top: -1.9rem;
+	margin-right: 10rem;
+	height: 5rem;
+	margin-top: -1.9rem;
 }
 .programming-skills-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    flex-wrap: wrap;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 .skill-name {
-    margin-top: 3px;
-    font-family: JetBrainsMono;
+	margin-top: 3px;
+	font-family: JetBrainsMono;
 }
 .skill-logo {
-    display: flex;
-    margin-left: 15px;
-    margin-top: -2px;
-    font-size: 30px;
-    filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
+	display: flex;
+	margin-left: 15px;
+	margin-top: -2px;
+	font-size: 30px;
+	filter: drop-shadow(3px 3px 5px rgba(0, 0, 0, 0.3));
 }
 
 @media only screen and (max-width: 1110px) {
-    .resume-card {
-        width: 780px;
-    }
-    .bullet-label {
-        font-size: 12px;
-    }
+	.resume-card {
+		width: 780px;
+	}
+	.bullet-label {
+		font-size: 12px;
+	}
 
-    .resume-bullet-details {
-        padding: 0 0 0 70px;
-    }
+	.resume-bullet-details {
+		padding: 0 0 0 70px;
+	}
 }
 @media only screen and (max-width: 898px) {
-    .resume-content {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .resume-card {
-        width: 350px;
-        height: fit-content;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .bullet-label {
-        font-size: 14px;
-    }
+	.resume-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.resume-card {
+		width: 350px;
+		height: fit-content;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.bullet-label {
+		font-size: 14px;
+	}
 
-    .resume-bullet-details {
-        height: 360px;
-        width: 350px;
-        padding-left: 35px;
-        margin-top: 5px;
-    }
-    .resume-bullets {
-        margin: 0px 0;
-        width: 100%;
-        box-shadow: 0 15px 9px -15px rgba(0, 0, 0, 0.4);
-    }
-    
-    .selected-bullet {
-        width: 100%;
-    }
-} 
+	.resume-bullet-details {
+		height: 360px;
+		width: 350px;
+		padding-left: 35px;
+		margin-top: 5px;
+	}
+	.resume-bullets {
+		margin: 0px 0;
+		width: 100%;
+		box-shadow: 0 15px 9px -15px rgba(0, 0, 0, 0.4);
+	}
+
+	.selected-bullet {
+		width: 100%;
+	}
+}

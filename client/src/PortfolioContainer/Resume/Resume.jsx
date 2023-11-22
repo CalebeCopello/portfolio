@@ -6,6 +6,7 @@ import { IoSchoolOutline } from 'react-icons/io5'
 import { MdOutlineWorkOutline } from 'react-icons/md'
 import { RiCodeSSlashFill } from 'react-icons/ri'
 import { SiStartrek } from 'react-icons/si'
+import { FaRegFilePdf } from 'react-icons/fa6'
 import {
 	BiLogoJavascript,
 	BiLogoReact,
@@ -71,7 +72,7 @@ const Resume = (props) => {
 	const certificationDetails = [
 		{
 			title: 'CC50: Introdução à Ciência da Computação',
-			url: '/pdfs/CalebeCopello-CS50.pdf',
+			url: '/pdfs/Calebe-Copello-CS50.pdf',
 			subHeading: '',
 			description:
 				'O curso CS50 é oferecido presencialmente e online pela Universidade de Harvard e, desde 2015, também pela Universidade Yale. O CS50 é uma experiência abrangente de introdução à ciência da computação, destacando-se não apenas por sua popularidade, mas também por proporcionar aos alunos uma base sólida em conceitos fundamentais e práticos da área.',
@@ -94,11 +95,15 @@ const Resume = (props) => {
 	const interestsDetails = [
 		{
 			heading: 'SciFi',
-			description: 'Adoro assistir filmes/séries de ficção científica!',
+			description: 'Admiro mestres da ficção científica, como Gene Roddenberry, Douglas Adams e George Lucas, com uma predileção pela space opera e um profundo impacto de Star Trek. Integro ficção científica em minha rotina por meio de filmes e séries, explorando mundos imaginativos. A singularidade de conceber como outras espécies geririam sociedades é cativante, proporcionando um escape da tensão da realidade atual.',
 		},
 		{
-			heading: 'SciFi',
-			description: 'Adoro assistir filmes/séries de ficção científica!',
+			heading: 'Hardware',
+			description: 'Tenho uma grande admiração pelo universo do hardware, especialmente em acompanhar inovações e benchmarks. Admirando figuras como Linus Torvalds, encontro fascínio na evolução constante das tecnologias. A experiência prática de construir e manter sistemas computacionais adiciona uma dimensão única à minha rotina, proporcionando uma compreensão prática e emocionante do mundo do hardware.',
+		},
+		{
+			heading: 'Games',
+			description: 'Tenho paixão por jogos de automação, souls-like e simulação, sendo Dark Souls e Factorio estão entre meus favoritos. Apesar de não participar de comunidades online, os jogos são minha principal fonte de entretenimento. Gosto tanto de jogos single-player quanto multiplayer, mas tenho uma inclinação especial pelas experiências envolventes dos jogos single-player.',
 		},
 	]
 	const resumeDetails = [
@@ -179,10 +184,15 @@ const Resume = (props) => {
 					<ResumeHeading
 						key={index}
 						heading={
-							<a href={certificationDetails.url} download={certificationDetails.url}>
-								{' '}
-								{certificationDetails.title}{' '}
-							</a>
+							<>
+								{certificationDetails.title}
+								<a
+									href={certificationDetails.url}
+									download={certificationDetails.url}
+								>
+									<FaRegFilePdf />
+								</a>
+							</>
 						}
 						subHeading={certificationDetails.subHeading}
 						description={certificationDetails.description}
